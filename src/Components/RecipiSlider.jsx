@@ -19,7 +19,17 @@ const RecipiSlider = ({ title, fetchUrl }) => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
-        cssEase: "linear"
+        cssEase: "linear",
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 1 }
+            }
+        ]
     };
     if (loading) return (
         <div className='text-center p-8 text-gray-300'>
